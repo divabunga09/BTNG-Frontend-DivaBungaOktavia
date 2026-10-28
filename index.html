@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Showroom Mobil - temukan kendaraan yang sesuai dengan kebutuhanmu.">
+    <title>Showroom Mobil | Temukan Mobil Impianmu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- NAVIGASI -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="#beranda" class="brand">
+                <span class="brand-logo">S</span>
+                <span>SHOWROOM<span class="gold">MOBIL</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                type="button" aria-label="Buka menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#beranda" class="nav-link active">Beranda</a>
+                <a href="#koleksi" class="nav-link">Koleksi Mobil</a>
+                <a href="#tentang" class="nav-link">Tentang</a>
+            </nav>
+
+            <a href="#koleksi" class="nav-button">Jelajahi Mobil ↗️</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- BERANDA -->
+        <section class="hero" id="beranda">
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <p class="eyebrow">— TEMUKAN KENDARAAN PILIHANMU</p>
+
+                    <h1>
+                        Perjalanan hebat<br>
+                        dimulai dari <span class="gold">mobil yang tepat.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Jelajahi koleksi kendaraan dan temukan mobil
+                        yang sesuai dengan kebutuhan serta gaya berkendaramu.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#koleksi" class="button button-primary">
+                            Lihat Koleksi ↗️
+                        </a>
+                        <a href="#tentang" class="button button-secondary">
+                            Kenali Kami →
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div>
+                            <strong id="heroCarCount">—</strong>
+                            <span>Mobil tersedia</span>
+                        </div>
+                        <span class="stat-divider"></span>
+                        <div>
+                            <strong>API</strong>
+                            <span>Data terintegrasi</span>
+                        </div>
+                        <span class="stat-divider"></span>
+                        <div>
+                            <strong>01</strong>
+                            <span>Mudah dijelajahi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#koleksi" class="hero-card" aria-label="Lihat koleksi mobil">
+                    <span class="visual-label">● PILIHAN UNTUK PERJALANANMU</span>
+
+                    <div class="car-illustration" aria-hidden="true">
+                        <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="carGold" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#ffe8a5"/>
+                                    <stop offset="50%" stop-color="#c99b42"/>
+                                    <stop offset="100%" stop-color="#f1ce78"/>
+                                </linearGradient>
+                                <linearGradient id="carGlass" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#52616e"/>
+                                    <stop offset="100%" stop-color="#111820"/>
+                                </linearGradient>
+                            </defs>
+
+                            <ellipse cx="320" cy="250" rx="230" ry="18"
+                                fill="#000000" opacity="0.45"/>
+
+                            <path d="M65 211 L105 166 Q120 151 165 145
+                                L250 91 Q267 81 300 82 L395 90
+                                Q420 92 444 117 L497 153
+                                Q530 161 547 185 L560 211
+                                L548 231 L70 231 Z"
+                                fill="url(#carGold)" stroke="#f5d98c" stroke-width="3"/>
+
+                            <path d="M180 143 L253 99 Q265 92 294 93
+                                L325 95 L330 145 Z"
+                                fill="url(#carGlass)" stroke="#d6b45f" stroke-width="3"/>
+
+                            <path d="M341 96 L391 100 Q408 103 425 122
+                                L444 145 L341 145 Z"
+                                fill="url(#carGlass)" stroke="#d6b45f" stroke-width="3"/>
+
+                            <path d="M77 204 L130 198 L152 207 L143 216 L73 216 Z"
+                                fill="#fff0bd"/>
+                            <path d="M501 191 L541 199 L546 211 L505 211 Z"
+                                fill="#fff0bd"/>
+
+                            <path d="M95 226 L535 226"
+                                stroke="#64491c" stroke-width="4"/>
+
+                            <g fill="#0b0d10" stroke="#70757b" stroke-width="7">
+                                <circle cx="180" cy="228" r="37"/>
+                                <circle cx="445" cy="228" r="37"/>
+                            </g>
+                            <g fill="#aeb2b5" stroke="#30353b" stroke-width="6">
+                                <circle cx="180" cy="228" r="22"/>
+                                <circle cx="445" cy="228" r="22"/>
+                            </g>
+                            <g stroke="#343a40" stroke-width="4">
+                                <path d="M180 209 V247 M161 228 H199"/>
+                                <path d="M445 209 V247 M426 228 H464"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="hero-card-bottom">
+                        <div>
+                            <small>PILIHANMU BERIKUTNYA</small>
+                            <strong>Mobil pilihanmu menanti.</strong>
+                        </div>
+                        <span class="circle-arrow">↗️</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- KOLEKSI MOBIL -->
+        <section class="section collection" id="koleksi">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">— KOLEKSI KAMI</p>
+                        <h2>Jelajahi <span class="gold">koleksi.</span></h2>
+                        <p class="section-description">
+                            Cari kendaraan favorit berdasarkan nama atau kategori.
+                        </p>
+                    </div>
+
+                    <p class="collection-status">
+                        <span class="status-dot"></span>
+                        <span id="collectionStatus">Menghubungkan ke API...</span>
+                    </p>
+                </div>
+
+                <div class="collection-tools">
+                    <label class="search-box">
+                        <span class="search-icon" aria-hidden="true">⌕</span>
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Cari merek atau nama mobil..."
+                            aria-label="Cari merek atau nama mobil"
+                        >
+                    </label>
+
+                    <div class="filter-buttons" role="group" aria-label="Filter kategori mobil">
+                        <button class="filter-button active" type="button"
+                            data-filter="all" aria-pressed="true">Semua</button>
+                        <button class="filter-button" type="button"
+                            data-filter="suv" aria-pressed="false">SUV</button>
+                        <button class="filter-button" type="button"
+                            data-filter="sedan" aria-pressed="false">Sedan</button>
+                        <button class="filter-button" type="button"
+                            data-filter="sport" aria-pressed="false">Sport</button>
+                    </div>
+                </div>
+
+                <div class="api-notice" id="apiNotice" role="status" aria-live="polite">
+                    <span class="spinner" aria-hidden="true"></span>
+                    <span id="noticeText">Memuat data kendaraan dari API resmi panitia...</span>
+                </div>
+
+                <div class="car-grid" id="carGrid" hidden></div>
+
+                <div class="empty-state" id="emptyState" hidden>
+                    <div class="empty-symbol">⌕</div>
+                    <h3>Mobil tidak ditemukan</h3>
+                    <p>Coba kata kunci atau kategori yang berbeda.</p>
+                    <button class="button button-secondary" id="resetFilters" type="button">
+                        Reset Pencarian
+                    </button>
+                </div>
+
+                <div class="error-state" id="loadError" hidden>
+                    <div class="error-symbol">!</div>
+                    <h3>Data mobil belum bisa ditampilkan</h3>
+                    <p id="errorMessage">
+                        Periksa koneksi internet, lalu coba lagi.
+                    </p>
+                    <button class="button button-primary" id="retryButton" type="button">
+                        Coba Lagi ↻
+                    </button>
+                </div>
+
+                <p class="api-footnote">
+                    Data kendaraan ditampilkan secara dinamis melalui API resmi panitia.
+                </p>
+            </div>
+        </section>
+
+        <!-- TENTANG -->
+        <section class="section about" id="tentang">
+            <div class="container about-layout">
+                <div class="about-logo" aria-hidden="true">S</div>
+
+                <div class="about-content">
+                    <p class="eyebrow">— TENTANG SHOWROOM</p>
+                    <h2>Lebih mudah menemukan<br><span class="gold">mobil yang tepat.</span></h2>
+                    <p>
+                        Showroom Mobil menyediakan tampilan koleksi kendaraan
+                        yang mudah dijelajahi. Gunakan fitur pencarian dan filter
+                        untuk membantu menemukan mobil sesuai preferensimu.
+                        Informasi kendaraan dimuat dari API yang terintegrasi
+                        pada halaman ini.
+                    </p>
+                    <a href="#koleksi" class="text-link">
+                        Mulai jelajahi koleksi ↗️
+                    </a>
+                </div>
+
+                <aside class="about-note">
+                    <small>01 / 03</small>
+                    <p>Temukan pilihanmu.<br><strong>Mulai perjalananmu.</strong></p>
+                    <span class="note-line"></span>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#beranda" class="brand">
+                <span class="brand-logo">S</span>
+                <span>SHOWROOM<span class="gold">MOBIL</span></span>
+            </a>
+            <p>© 2026 Showroom Mobil. Proyek Frontend.</p>
+            <a href="#beranda" class="back-to-top">Kembali ke atas ↑</a>
+        </div>
+    </footer>
+
+    <!-- POPUP DETAIL MOBIL -->
+    <dialog class="car-dialog" id="carDialog">
+        <button class="dialog-close" id="dialogClose" type="button"
+            aria-label="Tutup detail">×</button>
+        <div id="dialogContent"></div>
+    </dialog>
+
+</body>
+</html>
